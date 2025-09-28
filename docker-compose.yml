@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: laravel10-app
+    container_name: laravel12-app
     volumes:
       - .:/var/www
     depends_on:
@@ -12,9 +12,9 @@ services:
   db:
     image: mysql:8.0
     volumes:
-      - db_data_10:/var/lib/mysql
+      - db_data_12:/var/lib/mysql
       - ./custom.cnf:/etc/mysql/conf.d/custom.cnf
-    container_name: laravel10-db
+    container_name: laravel12-db
     environment:
       MYSQL_DATABASE: laravel
       MYSQL_ROOT_PASSWORD: secret
@@ -23,7 +23,7 @@ services:
 
   nginx:
     image: nginx:alpine
-    container_name: laravel10-nginx
+    container_name: laravel12-nginx
     ports:
       - "8081:80"
     volumes:
@@ -32,4 +32,4 @@ services:
     depends_on:
       - app
 volumes:
-  db_data_10:
+  db_data_12:
