@@ -26,7 +26,7 @@
 	<link rel="stylesheet" href="{{asset('backend/assets/css/semi-dark.css')}}"/>
 	<link rel="stylesheet" href="{{asset('backend/assets/css/header-colors.css')}}"/>
 	<!-- Toaster CSS -->
-	 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
+	 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >	
 	<!--data table-->
 	<link href="{{asset('backend/assets/plugins/datatable/css/dataTables.bootstrap5.min.css')}}" rel="stylesheet" />	 
 	<title>Rocker - Bootstrap 5 Admin Dashboard Template</title>
@@ -72,6 +72,11 @@
 	<script>
 		new PerfectScrollbar(".app-container")
 	</script>
+
+
+	<!--Sweet alert-->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+	<script src="{{ asset('backend/assets/js/code.js') }}"></script>
 
 	<!--Toaster-->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
